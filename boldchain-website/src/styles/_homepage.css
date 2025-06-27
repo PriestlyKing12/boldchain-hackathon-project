@@ -1,0 +1,101 @@
+/* src/styles/_homepage.css */
+
+/* Hero Section */
+.hero-section {
+    padding-top: 100px; /* Adjust as needed */
+    padding-bottom: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Ensures content is above background */
+    color: #ffffff;
+}
+
+.hero-headline {
+    font-family: 'Poppins', sans-serif;
+    font-size: 72px; /* Very large font */
+    font-weight: 800; /* Extra bold */
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px; /* Space between lines */
+}
+
+.hero-headline span:nth-child(1),
+.hero-headline span:nth-child(2) {
+    color: #ffffff; /* White for first two lines */
+}
+
+/* Specific styling for the third line "BoldChain" is handled inline in HomePage.jsx for glowing effect */
+/* Example: style={{ color: '#00f0ff', textShadow: '0 0 15px rgba(0,240,255,0.8)' }} */
+
+.hero-subheadline {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #e0e0e0; /* Light gray for subheadline */
+    max-width: 800px;
+    margin: 0 auto 50px auto; /* Centered, with space below */
+}
+
+/* Responsive adjustments for hero section */
+@media (max-width: 1024px) {
+    .hero-headline {
+        font-size: 56px;
+    }
+    .hero-subheadline {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-headline {
+        font-size: 40px;
+    }
+    .hero-subheadline {
+        font-size: 18px;
+    }
+    .hero-section .flex.justify-center {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Space out buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-headline {
+        font-size: 32px;
+    }
+    .hero-subheadline {
+        font-size: 16px;
+    }
+}
+
+/* Homepage Features Grid (within the .card container) */
+.home-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px; /* Gap between feature cards */
+    margin-top: 32px;
+}
+
+/* Adjustments for the main card on the homepage */
+.hero-section > .card {
+    background-color: rgba(11, 18, 43, 0.7); /* Darker, slightly transparent background */
+    backdrop-filter: blur(15px); /* Stronger blur for main card */
+    border: 1px solid rgba(0, 240, 255, 0.4); /* More prominent neon blue border */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+    padding: 40px; /* More padding */
+}
+
+.hero-section > .card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #00ff8c; /* Cyber green heading for this section */
+    margin-bottom: 30px;
+}

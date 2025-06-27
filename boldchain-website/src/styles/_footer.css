@@ -1,0 +1,103 @@
+/* src/styles/_footer.css */
+.footer {
+    background-color: rgba(11, 18, 43, 0.9); /* Darker navy, slightly transparent */
+    color: #e0e0e0; /* Light gray text */
+    padding: 40px 20px;
+    border-top: 1px solid rgba(0, 240, 255, 0.2); /* Subtle neon blue border top */
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    z-index: 2; /* Ensures it's above the background animation */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px; /* Space between sections */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: #00f0ff; /* Neon blue heading */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section h3 .icon {
+    margin-right: 10px;
+    color: #00ff8c; /* Cyber green icon */
+}
+
+.footer-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #c0c0c0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #00ff8c; /* Cyber green on hover */
+}
+
+.footer-section ul li .icon {
+    margin-right: 10px;
+    color: #00f0ff; /* Neon blue icons */
+    font-size: 18px; /* Adjust icon size */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        min-width: unset;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-section h3 {
+        justify-content: center;
+    }
+
+    .footer-section ul li {
+        justify-content: center;
+    }
+}

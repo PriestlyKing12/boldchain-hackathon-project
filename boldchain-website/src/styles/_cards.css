@@ -1,0 +1,68 @@
+/* src/styles/_cards.css */
+/* Card/Panel Styles (Applied to sections like "Why BoldChain?" and internal pages) */
+.card {
+    background-color: rgba(255, 255, 255, 0.1); /* Highly transparent white for glassmorphism */
+    backdrop-filter: blur(10px); /* Stronger blur for frosted glass */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+    border-radius: 16px; /* More rounded corners */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    padding: 32px;
+    color: #ffffff; /* White text for contrast */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* For hover effects */
+}
+/* Adjust headings and text inside cards to be white */
+.card h2, .card h3 { color: #ffffff; }
+.card p { color: #e0e0e0; } /* Slightly off-white for body text */
+
+.card-blue-border { border-color: rgba(0, 240, 255, 0.3); } /* Neon blue border for specific cards */
+.card-green-border { border-color: rgba(0, 255, 140, 0.3); } /* Cyber green border for specific cards */
+
+/* Hover effect for feature cards (for Homepage) */
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px; /* Slightly less padding */
+    background-color: rgba(255, 255, 255, 0.08); /* More transparent for features */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px); /* Lift effect */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+    border-color: rgba(0, 240, 255, 0.5); /* Subtle glow border */
+}
+
+.feature-card-image {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px; /* mb-5 */
+    border-radius: 8px;
+    object-fit: contain; /* Ensure images fit without cropping */
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3); /* Initial glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.feature-card:hover .feature-card-image {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.7); /* Stronger glow on hover */
+    border-radius: 20px; /* Morph to more rounded on hover */
+}
+
+.feature-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00f0ff; /* Neon blue heading */
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #e0e0e0; /* Off-white body text */
+}
