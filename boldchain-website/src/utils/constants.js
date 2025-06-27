@@ -1,31 +1,22 @@
-// src/utils/constants.js
+    // src/utils/constants.js
 
-/**
- * Frontend-only Simulation Data for Demo & UI Display Purposes.
- *
- * IMPORTANT FOR BACKEND TEAM:
- * These arrays/objects (initialRegisteredIdentities, MOCK_USERS) are NOT persistent.
- * They reside solely in the user's browser memory.
- *
- * In a real production system, the data for user identities, profiles, and
- * any blockchain registrations would be managed and persisted by the backend API
- * and a secure database (e.g., Firestore, SQL).
- *
- * Your backend will need to provide the actual API endpoints for:
- * 1. User authentication/login (if needed for the marketing site's future features).
- * 2. Registering new identities (email to wallet address mapping) persistently.
- * 3. Looking up registered identities from the blockchain or a cached layer.
- * 4. Storing and retrieving actual user profiles.
- */
+    /**
+     * Production-Ready Constants for BoldChain Frontend.
+     *
+     * IMPORTANT FOR BACKEND TEAM:
+     * This file now contains only static configuration values.
+     * All dynamic data (e.g., user identities, mock users, email data)
+     * will be managed by the backend API.
+     *
+     * Frontend components should make API calls to fetch or submit
+     * such data, as defined in `src/api/` modules.
+     */
 
-export const initialRegisteredIdentities = {
-    '0xdavidwalletaddress1234567890abcdef': 'david@energycorp.com',
-    '0xalicewalletaddressabcdef1234567890': 'alice@energycorp.com',
-    '0xbobwalletaddress0987654321fedcba987': 'bob@consulting.com',
-};
+    // Example: API Base URL (replace with your actual backend URL)
+    export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
 
-export const MOCK_USERS = [
-    { id: 'user_david', name: 'David', email: 'david@energycorp.com', wallet: '0xdavidwalletaddress1234567890abcdef' },
-    { id: 'user_alice', name: 'Alice', email: 'alice@energycorp.com', wallet: '0xalicewalletaddressabcdef1234567890' },
-    { id: 'user_bob', name: 'Bob', email: 'bob@consulting.com', wallet: '0xbobwalletaddress0987654321fedcba987' },
-];
+    // Example: Blockchain Network ID (if relevant for client-side display)
+    export const BLOCKCHAIN_NETWORK_ID = 'BoldChain-Mainnet-v1.0';
+
+    // Add any other truly static, global configuration values here.
+    

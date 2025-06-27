@@ -1,0 +1,12 @@
+/* src/index.css - Main CSS Entry Point */
+
+@import './styles/_base.css';
+@import './styles/_navbar.css';
+@import './styles/_footer.css';
+@import './styles/_buttons.css';
+@import './styles/_cards.css';
+@import './styles/_forms.css';
+@import './styles/_messagebox.css';
+@import './styles/_homepage.css'; 
+@import './styles/_utilities.css';
+/* Removed _emailclient.css as the Live Demo is no longer part of the app */

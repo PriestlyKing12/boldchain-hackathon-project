@@ -1,6 +1,27 @@
-// src/utils/helpers.js
-// This file is currently empty of application logic
-// as the BoldChain Email Client (Live Demo) has been removed.
-// It is kept here as a placeholder for any future helper functions
-// that might be needed for the marketing website, or for backend
-// communication utilities once they are implemented.
+    // src/utils/helpers.js
+
+    /**
+     * Production-Ready Helper Functions for BoldChain Frontend.
+     *
+     * This file is for general utility functions that do not involve
+     * direct API calls or specific UI rendering.
+     *
+     * All demo-specific email client logic (hashing, signing, encryption,
+     * localStorage for emails, mock user data) has been removed.
+     *
+     * New helper functions will be added here as needed for general frontend tasks.
+     */
+
+    /**
+     * Example: Simple function to format a date.
+     * @param {string} isoString An ISO date string.
+     * @returns {string} Formatted date string.
+     */
+    export const formatDateTime = (isoString) => {
+        if (!isoString) return 'N/A';
+        const date = new Date(isoString);
+        return date.toLocaleString();
+    };
+
+    // Add other universal helpers here, e.g., input validators, data transformers.
+    

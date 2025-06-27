@@ -3,33 +3,32 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
 
-/* Looping Background Animation */
+/* Looping Background Animation - Now with only TWO images */
 html, body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevents horizontal scroll from background images */
-    background-size: cover; /* Covers the entire viewport */
+    overflow-x: hidden;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    animation: changeBackground 30s infinite cubic-bezier(0.65, 0.05, 0.36, 1); /* Smooth loop */
+    /* Adjusted animation duration and timing for two images */
+    animation: changeBackground 20s infinite cubic-bezier(0.65, 0.05, 0.36, 1); /* Reduced to 20s for two images */
     position: relative;
-    z-index: 1; /* Ensures background is behind other content layers */
-    background-color: #0b122b; /* Fallback deep navy */
-    color: #ffffff; /* Default text color for body, will be refined by other classes */
+    z-index: 1;
+    background-color: #0b122b;
+    color: #ffffff;
     font-family: 'Open Sans', sans-serif;
 }
 
-/* Define the looping background animation */
+/* Define the looping background animation for two images */
 @keyframes changeBackground {
-    0% { background-image: url('https://cdn.pixabay.com/photo/2024/12/04/09/22/blockchain-9243900_1280.jpg'); }
-    25% { background-image: url('https://cdn.pixabay.com/photo/2024/12/04/09/22/blockchain-9243900_1280.jpg'); } /* Hold first image for a duration */
-    33% { background-image: url('https://cdn.pixabay.com/photo/2024/12/04/09/25/blockchain-9243908_1280.jpg'); } /* Transition to second image */
-    58% { background-image: url('https://cdn.pixabay.com/photo/2024/12/04/09/25/blockchain-9243908_1280.jpg'); } /* Hold second image */
-    66% { background-image: url('https://cdn.pixabay.com/photo/2024/12/07/08/45/blockchain-9250449_1280.jpg'); } /* Transition to third image */
-    91% { background-image: url('https://cdn.pixabay.com/photo/2024/12/07/08/45/blockchain-9250449_1280.jpg'); } /* Hold third image */
-    100% { background-image: url('https://cdn.pixabay.com/photo/2024/12/04/09/22/blockchain-9243900_1280.jpg'); } /* Loop back to first */
+    0% { background-image: url('https://cdn.pixabay.com/photo/2024/12/04/09/22/blockchain-9243900_1280.jpg'); } /* Image 1 */
+    45% { background-image: url('https://cdn.pixabay.com/photo/2024/12/04/09/22/blockchain-9243900_1280.jpg'); } /* Hold Image 1 */
+    55% { background-image: url('https://cdn.pixabay.com/photo/2024/12/04/09/25/blockchain-9243908_1280.jpg'); } /* Transition to Image 2 */
+    90% { background-image: url('https://cdn.pixabay.com/photo/2024/12/04/09/25/blockchain-9243908_1280.jpg'); } /* Hold Image 2 */
+    100% { background-image: url('https://cdn.pixabay.com/photo/2024/12/04/09/22/blockchain-9243900_1280.jpg'); } /* Loop back to Image 1 */
 }
 
 /* Core Layout Container for React App */
@@ -37,14 +36,16 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: transparent; /* Allows HTML/BODY background to show through */
+    background-color: transparent;
+    position: relative; /* Ensure it stacks correctly above background */
+    z-index: 2; /* Ensures content is above background */
 }
 
 /* Main Content Area */
 main {
     flex: 1;
     padding: 32px 16px;
-    background-color: transparent; /* Ensure main content area is transparent */
-    position: relative; /* For animations */
-    z-index: 2; /* Above background */
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
 }

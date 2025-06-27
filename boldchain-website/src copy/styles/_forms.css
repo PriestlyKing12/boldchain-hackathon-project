@@ -1,0 +1,52 @@
+/* src/styles/_forms.css */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff; /* White label for contrast on dark background */
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(0, 240, 255, 0.3); /* Neon blue border */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05); /* Very slight white fill */
+    color: #ffffff; /* White text input */
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input::placeholder {
+    color: #a0a0a0; /* Lighter placeholder text */
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #00f0ff; /* Brighter neon blue on focus */
+    box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.3); /* Glow effect on focus */
+}
+
+/* Specific styling for the card on pages with forms, like RegisterPage */
+.card.card-blue-border {
+    background-color: rgba(11, 18, 43, 0.7); /* Darker, slightly transparent background */
+    backdrop-filter: blur(15px); /* Stronger blur for form cards */
+    border: 1px solid rgba(0, 240, 255, 0.4); /* More prominent neon blue border */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+}
+
+.card.card-blue-border h1,
+.card.card-blue-border h2,
+.card.card-blue-border h3 {
+    color: #00f0ff; /* Neon blue headings */
+}
+
+.card.card-blue-border p {
+    color: #c0c0c0; /* Light gray body text */
+}

@@ -1,0 +1,116 @@
+/* src/styles/_navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(11, 18, 43, 0.95); /* Deep navy, slightly transparent */
+    backdrop-filter: blur(8px); /* Frosted glass effect */
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2); /* Subtle neon blue border */
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensures navbar is always on top */
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar-brand .icon {
+    color: #00ff8c; /* Cyber green */
+    margin-right: 10px;
+    font-size: 32px;
+}
+
+.navbar-brand .text {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand .text:hover {
+    color: #00f0ff; /* Neon blue on hover */
+}
+
+.navbar-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-link {
+    color: #e0e0e0; /* Light gray for links */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #00f0ff; /* Neon blue underline */
+    transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #00f0ff; /* Neon blue on hover */
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after { /* Active class from NavLink if implemented */
+    width: 100%;
+}
+
+.navbar-auth {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-menu-icon {
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown on mobile */
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .navbar-links {
+        display: none; /* Hide main links on smaller screens */
+    }
+
+    .navbar-menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    /* Future: Implement a mobile menu dropdown here */
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+    .navbar-brand .icon {
+        font-size: 28px;
+    }
+}
