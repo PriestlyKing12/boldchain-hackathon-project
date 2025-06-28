@@ -11,7 +11,7 @@
       plugins: [react()],
       base: `/${repoName}/`, // This is crucial for GitHub Pages to serve assets correctly
       build: {
-        outDir: 'dist', // Output directory for production build
+        outDir: 'docs', // Output directory for production build
         sourcemap: true, // Generate sourcemaps for debugging (optional for production)
       },
     });
